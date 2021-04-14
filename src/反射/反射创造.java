@@ -1,9 +1,8 @@
 package 反射;
 
-import com.sun.org.apache.xpath.internal.objects.XObject;
+//import com.sun.org.apache.xpath.internal.objects.XObject;
 
 import java.lang.reflect.Constructor;
-import java.lang.reflect.Method;
 
 public class 反射创造 {
     public static void main(String[] args) {
