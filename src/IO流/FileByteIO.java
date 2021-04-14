@@ -19,21 +19,22 @@ public class FileByteIO {
         this.file = file;
     }
 
-    public FileByteIO(){
+    public FileByteIO() {
     }
-    public FileByteIO(String str){
-        this.file=new File(str);
+
+    public FileByteIO(String str) {
+        this.file = new File(str);
     }
 
     //文件字节输入流,从当前文件输入
-    public String testFileInputStream(){
-        String str=null;
+    public String testFileInputStream() {
+        String str = null;
         try {
             FileInputStream in = new FileInputStream(file.getPath());
             byte[] b = new byte[100];
             int len = 0;
-            while( (len = in.read(b)) != -1){ //read读取到最后一位时会多读取一位然后返回负一
-               str=new String(b,0,len);
+            while ((len = in.read(b)) != -1) { //read读取到最后一位时会多读取一位然后返回负一
+                str = new String(b, 0, len);
                 //new String(b,0,len),参数1是缓冲数据的数组，参数2是从书中的那个位置开始转化字符串，参数3是总共转化的位数
             }
             in.close();
@@ -45,7 +46,7 @@ public class FileByteIO {
     }
 
     //文件自己输出流FileOutputStream
-    public void FileOutputSream(String str,String path){
+    public void FileOutputSream(String str, String path) {
         try {
             FileOutputStream out = new FileOutputStream(path);
             out.write(str.getBytes());//数据写入内存
@@ -57,9 +58,9 @@ public class FileByteIO {
 
     }
 
-    public void copyFile(String path){
+    public void copyFile(String path) {
         String s1 = this.testFileInputStream();//读取当前文件
-        FileOutputSream(s1,path);//写入新的文件
+        FileOutputSream(s1, path);//写入新的文件
         setFile(new File(path));//修改file里的路径
     }
 }

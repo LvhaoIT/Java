@@ -1,6 +1,6 @@
 package 动态代理;
 
-public class TestDemo implements ITestDemo{
+public class TestDemo implements ITestDemo {
     @Override
     public void test1() {
         System.out.println("执行test1方法");

@@ -1,6 +1,8 @@
 package HashSet;
-import  java.util.HashSet;
-import  java.util.Set;
+
+import java.util.HashSet;
+import java.util.Set;
+
 public class Hashset {
     public static void main(String[] args) {
         Set set = new HashSet(); //创建一个哈希set集合
@@ -10,7 +12,7 @@ public class Hashset {
         System.out.println(set);
 
         set.remove(1);//移除哈希set中的值1；
-        if(set.remove('1')==true)
+        if (set.remove('1') == true)
             System.out.println("成功");
         else
             System.out.println("失败");
@@ -27,7 +29,7 @@ public class Hashset {
         set.add('a');
         set.add(null);
 
-        for(Object obj : set){//将set集合中的所有元素拿出来给obj，直到结束
+        for (Object obj : set) {//将set集合中的所有元素拿出来给obj，直到结束
             System.out.println(obj);
         }
 
@@ -35,7 +37,7 @@ public class Hashset {
         //HashSet不保存相同的值
 
         //当我需要让集合只能村相同的类型对象，就需要使用到泛型
-        Set<String> set1=new HashSet<String>();
+        Set<String> set1 = new HashSet<String>();
     }
 
 }

@@ -28,7 +28,7 @@ public class Test {
         //其他类继承Compartor完成compare方法，可以
 //        Collections.sort(stus,new Student());
 
-        Collections.swap(list,0,1);
+        Collections.swap(list, 0, 1);
         System.out.println(list);
 
         /*
@@ -38,7 +38,7 @@ public class Test {
         boolean replaceAll(List list, Object oldVal, Object newVal) 使用新值替换List对象的所有旧值
          */
         //替换
-        Collections.replaceAll(list,"a","aa");
+        Collections.replaceAll(list, "a", "aa");
         System.out.println(list);
     }
 }

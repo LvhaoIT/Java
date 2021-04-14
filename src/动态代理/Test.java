@@ -28,7 +28,7 @@ public class Test {
          * 返回值即成功被代理后的对象
          * 因为返回值为一个obj类型，所以必须要用接口进行强转
          */
-        ITestDemo t = (ITestDemo) Proxy.newProxyInstance(handler.getClass().getClassLoader(),test.getClass().getInterfaces(),handler);
+        ITestDemo t = (ITestDemo) Proxy.newProxyInstance(handler.getClass().getClassLoader(), test.getClass().getInterfaces(), handler);
         t.test1();
         System.out.println("=========================================");
         t.test2();

@@ -5,7 +5,7 @@ public class Exception_1 {
         //会报ArithmeticException错误
 //        System.out.println(12/0);
         try {//try监控区域
-            System.out.println(12/0);
+            System.out.println(12 / 0);
         } catch (ArithmeticException e) {
             System.out.println("出现了除数为0的情况，无法运行");
         } catch (Exception e) { //出现Exception异常则执行下面的程序框中程序
@@ -18,7 +18,7 @@ public class Exception_1 {
 
         //利用throws
         try {//try监控区域
-            System.out.println(new Exception_1().Div(12,0));
+            System.out.println(new Exception_1().Div(12, 0));
         } catch (MyException e) {
             System.out.println("出现了除数为0的情况，无法运行");
         } catch (Exception e) { //出现Exception异常则执行下面的程序框中程序
@@ -28,8 +28,8 @@ public class Exception_1 {
 
     }
 
-    public int Div (int a , int b) throws MyException{
-        if(b==0){
+    public int Div(int a, int b) throws MyException {
+        if (b == 0) {
             throw new MyException("除法除数不能为0！(自定义异常)");
         }
         return 0;
