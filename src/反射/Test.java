@@ -36,7 +36,6 @@ public class Test {
 
 
             //获取类中方法
-
             //Method[] met = clazz.getMethods();//getMethods获取类中公有方法
             Method[] met = clazz.getDeclaredMethods();//getDeclaredMethods获取类中公有和私有方法
             for(Method a:met){
